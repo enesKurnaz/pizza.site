@@ -1,26 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teknolojik Yemekler</title>
 
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workintech + 🍕</title>
-  </head>
+  <!-- Google Fonts: Roboto Condensed, Barlow, Quattrocento, Satisfy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Quattrocento:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
 
-  <body>
-    <div id="app">
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1.  HEADER -->
+  <header class="hero">
+    <div class="hero__logo-wrapper">
+      <img src="public/assets/iteration-1/logo.svg" alt="Teknolojik Yemekler Logo" class="hero__logo" />
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__subtext">fırsatı kaçırma</p>
+      <h1 class="hero__title">KOD ACIKTIRIR<br>PİZZA, DOYURUR</h1>
+      <a href="#siparis" class="hero__cta-btn">ACIKTIM</a>
+    </div>
+
+    <div class="hero__visual">
+      <!-- Arka plan süsleri veya pizza görseli -->
+      <img src="public/assets/iteration-1/home-banner.png" alt="Lezzetli taze fırın pizza" class="hero__pizza-img" />
+    </div>
+  </header>
+
+  <!-- 2. ANA İÇERİK (MAIN) -->
+  <main>
+
+    <!-- Hızlı Kategori Barı -->
+    <nav class="category-nav" aria-label="Menü Kategorileri">
+      <ul class="category-nav__list">
+        <li><a href="#kore" class="category-nav__link"><img src="public/assets/iteration-2/icons/1.svg" alt="" /> YENİ! Kore</a></li>
+        <li><a href="#pizza" class="category-nav__link active"><img src="public/assets/iteration-2/icons/2.svg" alt="" /> Pizza</a></li>
+        <li><a href="#burger" class="category-nav__link"><img src="public/assets/iteration-2/icons/3.svg" alt="" /> Burger</a></li>
+        <li><a href="#kizartmalar" class="category-nav__link"><img src="public/assets/iteration-2/icons/4.svg" alt="" /> Kızartmalar</a></li>
+        <li><a href="#fastfood" class="category-nav__link"><img src="public/assets/iteration-2/icons/5.svg" alt="" /> Fast food</a></li>
+        <li><a href="#icecek" class="category-nav__link"><img src="public/assets/iteration-2/icons/6.svg" alt="" /> Gazlı İçecek</a></li>
+      </ul>
+    </nav>
+
+    <!-- Özel Kampanyalar / Kartlar -->
+    <section class="promo-section" aria-label="Özel Kampanyalar">
+      <div class="container promo-grid">
+        <!-- Büyük Kırmızı Kart -->
+        <article class="promo-card promo-card--large promo-card--red">
+          <div class="promo-card__content">
+            <h2 class="promo-card__title">Özel<br>Lezzetus</h2>
+            <p class="promo-card__desc">Position: Absolute Acı Burger</p>
+            <a href="#siparis" class="promo-card__btn">SİPARİŞ VER</a>
+          </div>
+          <img src="public/assets/iteration-2/cta/kart-1.png" alt="Özel Lezzetus Acı Burger" class="promo-card__img" />
+        </article>
+
+        <!-- Sağ Taraf 2 Küçük Kart Grubu -->
+        <div class="promo-subgroup">
+          <!-- Siyah Kart -->
+          <article class="promo-card promo-card--dark">
+            <div class="promo-card__content">
+              <h3 class="promo-card__heading">Hackathlon<br>Burger Menü</h3>
+              <a href="#siparis" class="promo-card__btn">SİPARİŞ VER</a>
+            </div>
+            <img src="public/assets/iteration-2/cta/kart-2.png" alt="Hackathlon Burger Menü ve Patates" class="promo-card__img" />
+          </article>
+
+          <!-- Kurye Kartı -->
+          <article class="promo-card promo-card--light">
+            <div class="promo-card__content">
+              <h3 class="promo-card__heading"><span class="highlight">Çoooook</span> hızlı<br>npm gibi kurye</h3>
+              <a href="#siparis" class="promo-card__btn">SİPARİŞ VER</a>
+            </div>
+            <img src="public/assets/iteration-2/cta/kart-3.png" alt="Hızlı teslimat yapan scooter kurye" class="promo-card__img" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popüler / Paket Menüler Bölümü -->
+    <section class="menu-section" aria-label="Popüler Menüler">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__subtitle">en çok paketlenen menüler</p>
+          <h2 class="section-header__title">Acıktıran Kodlara Doyuran Lezzetler</h2>
+        </header>
+
+        <!-- Kategori Filtre Butonları -->
+        <div class="filter-bar">
+          <button type="button" class="filter-btn"><img src="public/assets/iteration-2/icons/1.svg" alt="" /> Ramen</button>
+          <button type="button" class="filter-btn active"><img src="public/assets/iteration-2/icons/2.svg" alt="" /> Pizza</button>
+          <button type="button" class="filter-btn"><img src="public/assets/iteration-2/icons/3.svg" alt="" /> Burger</button>
+          <button type="button" class="filter-btn"><img src="public/assets/iteration-2/icons/4.svg" alt="" /> French fries</button>
+          <button type="button" class="filter-btn"><img src="public/assets/iteration-2/icons/5.svg" alt="" /> Fast food</button>
+          <button type="button" class="filter-btn"><img src="public/assets/iteration-2/icons/6.svg" alt="" /> Soft drinks</button>
+        </div>
+
+        <!-- Ürün Kartları Listesi -->
+        <div class="product-grid">
+          <!-- Ürün 1 -->
+          <article class="product-card">
+            <img src="public/assets/iteration-2/pictures/food-1.png" alt="Terminal Pizza" class="product-card__img" />
+            <h3 class="product-card__title">Terminal Pizza</h3>
+            <div class="product-card__meta">
+              <span class="product-card__rating">4.9</span>
+              <span class="product-card__reviews">(200)</span>
+              <span class="product-card__price">60₺</span>
+            </div>
+          </article>
+
+          <!-- Ürün 2 -->
+          <article class="product-card">
+            <img src="public/assets/iteration-2/pictures/food-2.png" alt="Position Absolute Acı Pizza" class="product-card__img" />
+            <h3 class="product-card__title">Position Absolute Acı Pizza</h3>
+            <div class="product-card__meta">
+              <span class="product-card__rating">4.9</span>
+              <span class="product-card__reviews">(200)</span>
+              <span class="product-card__price">60₺</span>
+            </div>
+          </article>
+
+          <!-- Ürün 3 -->
+          <article class="product-card">
+            <img src="public/assets/iteration-2/pictures/food-3.png" alt="useEffect Tavuklu Burger" class="product-card__img" />
+            <h3 class="product-card__title">useEffect Tavuklu Burger</h3>
+            <div class="product-card__meta">
+              <span class="product-card__rating">4.9</span>
+              <span class="product-card__reviews">(200)</span>
+              <span class="product-card__price">60₺</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3. ALT BİLGİ (FOOTER) -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <!-- İletişim / Marka Bilgisi -->
+      <div class="footer__col footer__brand">
+        <h2 class="footer__title">Teknolojik<br>Yemekler</h2>
+        <address class="footer__contact">
+          <p><img src="public/assets/iteration-2/footer/icons/icon-1.png" alt="" class="footer__icon" /> 341 Londonderry Road, Istanbul Türkiye</p>
+          <p><img src="public/assets/iteration-2/footer/icons/icon-2.png" alt="" class="footer__icon" /> <a href="mailto:aciktim@teknolojikyemekler.com">aciktim@teknolojikyemekler.com</a></p>
+          <p><img src="public/assets/iteration-2/footer/icons/icon-3.png" alt="" class="footer__icon" /> <a href="tel:+902161234567">+90 216 123 45 67</a></p>
+        </address>
+      </div>
+
+      <!-- Menü Linkleri -->
+      <div class="footer__col footer__nav">
+        <h3 class="footer__heading">Hot Menu</h3>
+        <ul>
+          <li><a href="#terminal-pizza">Terminal Pizza</a></li>
+          <li><a href="#hackathlon-pizza">5 Kişilik Hackathlon Pizza</a></li>
+          <li><a href="#useeffect-pizza">useEffect Tavuklu Pizza</a></li>
+          <li><a href="#beyaz-console">Beyaz Console Frosty</a></li>
+          <li><a href="#testler-gecti">Testler Geçti Mutlu Burger</a></li>
+          <li><a href="#position-absolute">Position Absolute Acı Burger</a></li>
+        </ul>
+      </div>
+
+      <!-- Instagram Akışı -->
+      <div class="footer__col footer__instagram">
+        <h3 class="footer__heading">Instagram</h3>
+        <div class="instagram-grid">
+          <img src="public/assets/iteration-2/footer/insta/li-0.png" alt="Instagram gönderisi 1" />
+          <img src="public/assets/iteration-2/footer/insta/li-1.png" alt="Instagram gönderisi 2" />
+          <img src="public/assets/iteration-2/footer/insta/li-2.png" alt="Instagram gönderisi 3" />
+          <img src="public/assets/iteration-2/footer/insta/li-3.png" alt="Instagram gönderisi 4" />
+          <img src="public/assets/iteration-2/footer/insta/li-4.png" alt="Instagram gönderisi 5" />
+          <img src="public/assets/iteration-2/footer/insta/li-5.png" alt="Instagram gönderisi 6" />
+        </div>
       </div>
     </div>
-  </body>
 
+    <!-- Telif ve Sosyal Medya -->
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2023 Teknolojik Yemekler.</p>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+         <img src="public/assets/iteration-2/footer/icons/twitter.png" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
