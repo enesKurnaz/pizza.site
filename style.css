@@ -72,3 +72,81 @@ button {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+ /* 3. HEADER BÖLÜMÜ  */
+   
+.hero {
+  background-color: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__logo-wrapper {
+  margin-bottom: 2.5rem;
+  z-index: 2;
+}
+
+.hero__logo {
+  height: 2.8rem;
+  width: auto;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero__subtext {
+  font-family: var(--font-accent);
+  color: var(--yellow);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.hero__cta-btn {
+  background-color: var(--yellow);
+  color: var(--dark-gray);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 3rem;
+  border-radius: 50px;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.hero__cta-btn:hover {
+  background-color: #e5b40f;
+  transform: translateY(-2px);
+}
+
+.hero__visual {
+  width: 100%;
+  max-width: 820px;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero__pizza-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
