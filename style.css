@@ -150,3 +150,42 @@ button {
   height: auto;
   object-fit: contain;
 }
+
+   /* 4. KATEGORİ NAVİGASYONU */
+  
+.category-nav {
+  padding: 1.5rem 0;
+  background-color: var(--white);
+}
+
+.category-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all var(--transition-fast);
+}
+
+.category-nav__link img {
+  width: 24px;
+  height: 24px;
+}
+
+.category-nav__link:hover,
+.category-nav__link.active {
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
